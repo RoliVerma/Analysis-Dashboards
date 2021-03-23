@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Deduction Performance Analysis
+        </title>
+        <link rel="stylesheet" href="FontRoboto.css">
+        <style>
+            @font-face {
+            font-family: myFirstFont;
+            src: local(FontRoboto);
+            }
+            *{
+                font-family: myFirstFont;
+                color: dimgray;
+            }
+            .num{
+                color: black;
+                font-weight: bold;
+                font-size: large;
+            }
+            .tile-hor{
+                display: flex;               
+               margin-left: 600px;
+            }
+            .tile{
+                width: 30%;
+                height: 70px;
+            }
+            #processor{
+               position: absolute;
+                width: 20;
+                top:110px;
+                left: 0;
+                        
+            }
+            #top_cust{
+               position: absolute;
+                width: 10;
+                top:380px;
+                left: 0;               
+            }
+            #reason_code{
+               position: absolute;
+                width: 20;
+                top:660px;
+                left: 0;               
+            }
+            #vol_val{
+                position: absolute;
+                top:120px;
+                right: 0;
+                width: 80;                         
+            }
+            
+            
+           
+        </style>
+    </head>
+    <body>
+        <span>The Dashboard shows Root Cause Analysis of Closed Deductions in last 120 days</span>
+        <div class="tile-hor">
+         <div class="tile" id="tile_volume"><span>Volume</span><br><br><span class="num" id="vol">0</span></div>
+        <div class="tile" id="tile_value"><span>Value</span><br><br><span class="num" id="val">0</span></div>
+        <div class="tile" id="tile_avg_days"><span>Average Days to Resolve</span><br><br><span class="num" id="avg" style="position:absolute; right:170px;">0</span></div>
+        </div>
+        <div class="hor">
+        <div class="smallChart" id="processor"></div>
+        <div id="vol_val"></div>      
+        <div class="smallChart" id="top_cust" ></div>
+        <div class="smallChart" id="reason_code"></div>
+        
+         </div>
+        <script src="dataset.js"></script>        
+        <!-- <script src="https://code.highcharts.com/stock/highstock.js"></script> -->
+       <script src="highcharts-more.js"></script>
+       <script src="highstock.js"></script>
+       <script src="crossfilter.js"></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/crossfilter2/1.4.7/crossfilter.min.js"></script>  -->
+        <script src="dom.js"></script>
+               
+    </body>
+</html>
